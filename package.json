@@ -1,0 +1,12 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "Personal CV",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "pdf": "node generate-pdf.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.2.0"
+  }
+}
