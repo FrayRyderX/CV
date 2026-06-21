@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoja de Vida - Freymer Jesús Sepúlveda</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f5f5f5;
+      }
+
+      .container {
+        max-width: 950px;
+        margin: 20px auto;
+        background: white;
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .sidebar {
+        background: #2c3e50;
+        color: white;
+        padding: 30px 20px;
+      }
+
+      .content {
+        padding: 30px 30px;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        grid-column: 1 / -1;
+        background: #34495e;
+        color: white;
+        padding: 30px;
+      }
+
+      .header-content img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-right: 30px;
+        border: 4px solid #3498db;
+        object-fit: cover;
+        object-position: center 10%;
+      }
+
+      .header-text h1 {
+        font-size: 28px;
+        margin-bottom: 5px;
+      }
+
+      .header-text p {
+        font-size: 16px;
+        color: #ecf0f1;
+      }
+
+      .section-title {
+        font-size: 13px;
+        font-weight: bold;
+        color: #3498db;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .sidebar .section-title {
+        color: #3498db;
+        border-bottom: 2px solid #3498db;
+      }
+
+      .contact-item {
+        margin-bottom: 12px;
+        font-size: 12px;
+        word-break: break-word;
+      }
+
+      .contact-item strong {
+        display: block;
+        color: #3498db;
+        margin-bottom: 3px;
+      }
+
+      .perfil-text {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #ecf0f1;
+      }
+
+      .job-entry {
+        margin-bottom: 20px;
+      }
+
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+
+      .job-title {
+        font-weight: bold;
+        font-size: 15px;
+        color: #2c3e50;
+      }
+
+      .job-dates {
+        font-size: 13px;
+        color: #7f8c8d;
+      }
+
+      .company {
+        font-size: 13px;
+        color: #3498db;
+        margin-bottom: 8px;
+      }
+
+      .functions {
+        font-size: 13px;
+        margin-top: 8px;
+        color: #555;
+      }
+
+      .functions li {
+        margin-left: 20px;
+        margin-bottom: 6px;
+        list-style: disc;
+      }
+
+      .education-entry {
+        margin-bottom: 18px;
+      }
+
+      .edu-degree {
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 3px;
+      }
+
+      .edu-year {
+        font-size: 12px;
+        color: #7f8c8d;
+        margin-bottom: 3px;
+      }
+
+      .edu-school {
+        font-size: 12px;
+        color: #555;
+      }
+
+      .reference-item {
+        margin-bottom: 15px;
+        font-size: 12px;
+      }
+
+      .reference-name {
+        font-weight: bold;
+        color: #3498db;
+        margin-bottom: 3px;
+      }
+
+      .reference-info {
+        color: #ecf0f1;
+        line-height: 1.4;
+      }
+
+      .skills-list {
+        font-size: 12px;
+        line-height: 1.6;
+        color: #ecf0f1;
+      }
+
+      .skills-list strong {
+        color: #3498db;
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 0;
+        }
+
+        html,
+        body {
+          width: 210mm;
+          height: 297mm;
+          margin: 0;
+          padding: 0;
+          background: white;
+          line-height: 1.45;
+        }
+
+        .container {
+          width: 210mm;
+          min-height: 297mm;
+          margin: 0;
+          box-shadow: none;
+          display: grid;
+          grid-template-columns: 255px 1fr;
+          grid-template-rows: auto 1fr;
+          max-width: none;
+        }
+
+        .header-content {
+          grid-column: 1 / -1;
+          grid-row: 1;
+          padding: 18px 22px;
+          margin-bottom: 0;
+        }
+
+        .header-content img {
+          width: 88px;
+          height: 88px;
+          margin-right: 18px;
+          border-width: 3px;
+        }
+
+        .header-text h1 {
+          font-size: 21px;
+          margin-bottom: 4px;
+        }
+
+        .header-text p {
+          font-size: 13px;
+        }
+
+        .sidebar {
+          grid-row: 2;
+          grid-column: 1;
+          padding: 18px 16px;
+          align-self: stretch;
+        }
+
+        .content {
+          grid-row: 2;
+          grid-column: 2;
+          padding: 18px 22px;
+        }
+
+        .section-title {
+          font-size: 11px;
+          margin-top: 14px;
+          margin-bottom: 8px;
+          padding-bottom: 5px;
+          letter-spacing: 0.5px;
+        }
+
+        .sidebar .section-title:first-of-type,
+        .content .section-title:first-of-type {
+          margin-top: 0;
+        }
+
+        .contact-item {
+          margin-bottom: 8px;
+          font-size: 11px;
+        }
+
+        .perfil-text {
+          font-size: 11px;
+          line-height: 1.45;
+        }
+
+        .skills-list {
+          font-size: 11px;
+          line-height: 1.5;
+        }
+
+        .skills-list br + br {
+          display: none;
+        }
+
+        .reference-item {
+          margin-bottom: 10px;
+          font-size: 11px;
+        }
+
+        .reference-info {
+          line-height: 1.35;
+        }
+
+        .job-entry {
+          margin-bottom: 14px;
+        }
+
+        .job-title {
+          font-size: 13px;
+        }
+
+        .job-dates,
+        .company {
+          font-size: 11px;
+          margin-bottom: 5px;
+        }
+
+        .functions {
+          font-size: 11px;
+          margin-top: 6px;
+        }
+
+        .functions li {
+          margin-bottom: 4px;
+          margin-left: 18px;
+        }
+
+        .education-entry {
+          margin-bottom: 12px;
+        }
+
+        .edu-degree {
+          font-size: 12px;
+        }
+
+        .edu-year,
+        .edu-school {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-content" style="grid-column: 1 / -1">
+        <img src="assets/img/perfil_photo.png" alt="Foto de Freymer" />
+        <div class="header-text">
+          <h1>Freymer Jesús Sepúlveda Pimentel</h1>
+          <p>Desarrollador Backend Junior</p>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="section-title">Datos Personales</div>
+        <div class="contact-item">
+          <strong>Teléfono</strong>
+          +57 300-1741691 (Personal)<br />
+          +57 302-4650490 (Otro)
+        </div>
+        <div class="contact-item">
+          <strong>Correo</strong>
+          frayryderx@gmail.com
+        </div>
+        <div class="contact-item">
+          <strong>Dirección</strong>
+          Calle 19B #82A-14, Belén Altavista, <br />
+          Medellín, Colombia
+        </div>
+
+        <div class="section-title">Perfil</div>
+        <div class="perfil-text">
+          Profesional responsable, honesto y organizado con gran capacidad de
+          aprendizaje, adaptación rápida y habilidad para trabajar en equipo.
+          Orientado a soluciones y comunicación efectiva.
+        </div>
+
+        <div class="section-title">Habilidades Técnicas</div>
+        <div class="skills-list">
+          <strong>Lenguajes:</strong> JavaScript, TypeScript, Python<br /><br />
+          <strong>Backend:</strong> Node.js, REST API<br /><br />
+          <strong>Frontend:</strong> React<br /><br />
+          <strong>Bases de Datos:</strong> MySQL, MongoDB<br /><br />
+          <strong>Herramientas:</strong> Git, GitHub
+        </div>
+
+        <div class="section-title">Referencias Personales</div>
+        <div class="reference-item">
+          <div class="reference-name">William Meneses Cadavid</div>
+          <div class="reference-info">
+            Maestro de Obra<br />
+            +57 312-2135293
+          </div>
+        </div>
+        <div class="reference-item">
+          <div class="reference-name">Walter Gutierrez</div>
+          <div class="reference-info">
+            Ayudante de Obra, Vigilante<br />
+            +57 300-8414401
+          </div>
+        </div>
+        <div class="reference-item">
+          <div class="reference-name">Maria Soraida Pimentel</div>
+          <div class="reference-info">
+            Cajera, Ayudante Cocina, Pizzera<br />
+            +57 302-4650490<br />
+            soraprince74@gmail.com
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="section-title">Experiencia Profesional</div>
+
+        <div class="job-entry">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Desarrollador Backend Junior</div>
+              <div class="company">Privilege Team (Master)</div>
+            </div>
+            <div class="job-dates">16-04-2023 - Actual</div>
+          </div>
+          <ul class="functions">
+            <li>Desarrollo de APIs REST con Node.js y JavaScript</li>
+            <li>
+              Gestión y administración de bases de datos (creación de queries
+              para métricas)
+            </li>
+            <li>
+              Integración con servicios AWS (API Gateway, Lambdas, Dynamo, etc.)
+            </li>
+            <li>Soporte técnico a usuarios y equipo</li>
+            <li>
+              Dominio en tecnologías: Node.js, React, MySQL, REST API, Git,
+              JavaScript, TypeScript, Python
+            </li>
+          </ul>
+        </div>
+
+        <div class="section-title">Educación</div>
+
+        <div class="education-entry">
+          <div class="edu-degree">Bachiller (en Ciencias)</div>
+          <div class="edu-year">2018 - Caracas, Venezuela</div>
+          <div class="edu-school">Colegio La Salle Tienda Honda</div>
+        </div>
+
+        <div class="education-entry">
+          <div class="edu-degree">Técnico en Programación de Software</div>
+          <div class="edu-year">18-07-2022 - 17-10-2023</div>
+          <div class="edu-school">
+            Centro De Servicios y Gestión Empresarial - SENA<br />Medellín,
+            Colombia
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
