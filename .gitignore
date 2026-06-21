@@ -1,0 +1,19 @@
+# Dependencias
+node_modules/
+
+# PDF generado
+*.pdf
+
+# Editor / IDE
+.vscode/
+.cursor/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
